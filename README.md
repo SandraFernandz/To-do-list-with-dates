@@ -1,2 +1,2 @@
-# recipe-searcher
-A simple react app using typescript that searches for recipes
+#To do list
+This is a basic to do list built with typescript and react
