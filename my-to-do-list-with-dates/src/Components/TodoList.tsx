@@ -3,9 +3,10 @@ import { ITask } from '../interfaces';
 
 interface Props {
   task: ITask;
+  completeTask(taskNameToDelete: string): void;
 }
 
-function TodoTask({ task }: Props) {
+function TodoTask({ task, completeTask }: Props) {
   return (
     <>
       <div className="task">
@@ -13,7 +14,14 @@ function TodoTask({ task }: Props) {
           <span>{task.taskName}</span>
           <span> {task.deadline}</span>
         </div>
-        <button className="subButton">x</button>
+        <button
+          onClick={() => {
+            completeTask(task.taskName);
+          }}
+          className="subButton"
+        >
+          x
+        </button>
       </div>
     </>
   );
