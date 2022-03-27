@@ -19,6 +19,7 @@ const App: FC = () => {
 
   const handleList = (): void => {
     const newTask = { taskName: task, deadline: deadline };
+    //we are with spread operator collecting the array list and adding a new element(newTask) to that array
     setList([...list, newTask]);
     setTask('');
     setDeadline(0);
